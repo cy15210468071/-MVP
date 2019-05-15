@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_view"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/priority_blue_1"
+    android:minHeight="?actionBarSize"
+    app:contentInsetStart="0.0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <!--左返回键按钮-->
+    <FrameLayout
+        android:id="@+id/ll_title_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!--中间标题-->
+    <TextView
+        android:id="@+id/toolbar_title_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="@color/colorPageBg"
+        android:textSize="16sp" />
+
+</android.support.v7.widget.Toolbar>

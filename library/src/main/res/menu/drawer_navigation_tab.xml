@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tab_home"
+            android:icon="@drawable/ic_item_home"
+            android:title="项目主页"/>
+
+        <item
+            android:id="@+id/tab_work"
+            android:icon="@drawable/ic_item_more"
+            android:title="更多内容"/>
+
+        <item
+            android:id="@+id/tab_contact"
+            android:icon="@drawable/ic_item_scan"
+            android:title="二维码"/>
+
+        <item
+            android:id="@+id/group_item_share"
+            android:icon="@drawable/ic_item_share"
+            android:title="分享项目"/>
+    </group>
+
+    <item android:title="选项">
+        <menu>
+            <item
+                android:id="@+id/item_model"
+                android:icon="@drawable/ic_item_mode"
+                android:title="夜间模式"/>
+
+            <item
+                android:id="@+id/item_about"
+                android:icon="@drawable/ic_item_about"
+                android:title="关于"/>
+        </menu>
+    </item>
+</menu>

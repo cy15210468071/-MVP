@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/tab_msg_unselect"
+        android:title="首页"/>
+
+    <item
+        android:id="@+id/tab_work"
+        android:icon="@drawable/tab_app_unselect"
+        android:title="工作台"/>
+
+    <item
+        android:id="@+id/tab_contact"
+        android:icon="@drawable/tab_contacts_unselect"
+        android:title="通讯录"/>
+
+    <item
+        android:id="@+id/tab_mine"
+        android:icon="@drawable/tab_mine_unselect"
+        android:title="我的"/>
+</menu>
