@@ -1,7 +1,6 @@
 package com.aoto.main;
 
 import android.annotation.SuppressLint;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,19 +15,20 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.aoto.library.arouter.RouterURLS;
 import com.aoto.main.ui.fragment.ContactFragment;
 import com.aoto.main.ui.fragment.MessageFragment;
-import com.aoto.main.ui.fragment.MineFragment;
 import com.aoto.main.ui.fragment.WorkFragment;
-import com.gyf.immersionbar.BarHide;
-import com.gyf.immersionbar.ImmersionBar;
+import com.aoto.mine.fragment.MineFragment;
 
 import java.lang.reflect.Field;
 import de.hdodenhof.circleimageview.CircleImageView;
 
+@Route(path = RouterURLS.BASE_MAIN)
 public class MainActivity extends AppCompatActivity implements MessageFragment.OnOpenDrawerLayoutListener, BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
     DrawerLayout drawer_layout;
     ViewPager viewPager;

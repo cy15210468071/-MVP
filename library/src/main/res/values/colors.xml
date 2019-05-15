@@ -32,14 +32,17 @@
     <color name="colorTransparent">#00000000</color>
     <!--侧边栏分割线-->
     <color name="colorNavLine">#E0E0E0</color>
-    <!-- 灰色下划线 -->
-    <color name="grayLine">#e5e5e5</color>
     <!-- 灰色，二级字段 -->
+    <color name="grayBg">#f1f3f7</color>
+    <color name="gray1">#e5e5e5</color>
     <color name="gray2">#666666</color>
     <!-- 灰色，三级字段 -->
     <color name="gray3">#c3c3c3</color>
-    <!-- 底部导航选择红色 -->
-    <color name="redTab">#D03E49</color>
+    <color name="gray4">#EFEFF3</color>
+    <color name="gray5">#898787</color>
+    <color name="gray6">#FAFAFC</color>
+    <color name="gray7">#999</color>
+    <color name="gray8">#CFCFD5</color>
 
     <!--透明度颜色-->
     <color name="alpha_15_white">#26FFFFFF</color>

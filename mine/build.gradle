@@ -1,5 +1,5 @@
 //控制组件模式和集成模式
-if (rootProject.ext.isMainApplication) {
+if (rootProject.ext.isMineApplication) {
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
@@ -16,9 +16,9 @@ android {
         versionName rootProject.ext.android["versionName"]
         multiDexEnabled true
 
-        if (rootProject.ext.isMainApplication){
+        if (rootProject.ext.isMineApplication){
             //组件模式下设置applicationId
-            applicationId "com.aoto.main"
+            applicationId "com.aoto.mine"
         }
         javaCompileOptions {
             annotationProcessorOptions {
@@ -57,5 +57,4 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':library')
     annotationProcessor rootProject.ext.dependencies["router-compiler"]
-    implementation project(':mine')
 }

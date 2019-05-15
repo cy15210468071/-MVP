@@ -56,8 +56,10 @@ dependencies {
     if (!rootProject.ext.isMainApplication){
         implementation project(':main')
     }
+    if (!rootProject.ext.isMineApplication){
+        implementation project(':mine')
+    }
 
     implementation project(':library')
-    implementation project(':main')
     annotationProcessor rootProject.ext.dependencies["router-compiler"]
 }

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBg">
+
+    <View
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary" />
+
+    <com.ns.yc.ycutilslib.scrollView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/title_bar_content" />
+
+            <RelativeLayout
+                android:id="@+id/re_myhead_mine"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:background="@color/priority_blue_1">
+
+                <TextView
+                    android:id="@+id/id_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_centerInParent="true"
+                    android:text="https://github.com/cy15210468071"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/id_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/id_link"
+                    android:layout_centerInParent="true"
+                    android:text="Chen Yu"
+                    android:textColor="@color/white" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_head"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerInParent="true"
+                    android:layout_above="@id/id_username"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/mine" />
+            </RelativeLayout>
+
+            <!--主体-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp15"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:orientation="vertical">
+
+                    <!--手机号-->
+                    <RelativeLayout
+                        android:id="@+id/re_phonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingRight="@dimen/dp15">
+
+                        <ImageView
+                            android:id="@+id/iv_phonenumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/phone" />
+
+                        <TextView
+                            android:id="@+id/tv_phonenumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_toEndOf="@+id/iv_phonenumber"
+                            android:layout_toRightOf="@+id/iv_phonenumber"
+                            android:text="手机号"
+                            android:textColor="@color/blackText1"
+                            android:textSize="@dimen/textSize16" />
+
+                        <TextView
+                            android:id="@+id/tv_setphonenumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/alpha_40_black"
+                            android:textSize="@dimen/textSize16" />
+
+                        <ImageView
+                            android:id="@+id/iv_setphonenumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_triangle_babylist_item" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray6" />
+
+                    <!--邮箱-->
+                    <RelativeLayout
+                        android:id="@+id/re_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/re_phonenumber"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingRight="@dimen/dp15">
+
+                        <ImageView
+                            android:id="@+id/iv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/email" />
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_toEndOf="@+id/iv_email"
+                            android:layout_toRightOf="@+id/iv_email"
+                            android:text="邮箱"
+                            android:textColor="@color/blackText1"
+                            android:textSize="@dimen/textSize16" />
+
+                        <TextView
+                            android:id="@+id/tv_setEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/alpha_40_black"
+                            android:textSize="@dimen/textSize16" />
+
+                        <ImageView
+                            android:id="@+id/iv_setEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_triangle_babylist_item" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:orientation="vertical">
+                    <!--使用帮助-->
+                    <RelativeLayout
+                        android:id="@+id/re_usinghelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingRight="@dimen/dp15">
+
+                        <ImageView
+                            android:id="@+id/iv_usinghelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/about" />
+
+                        <TextView
+                            android:id="@+id/tv_usinghelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_toEndOf="@+id/iv_usinghelp"
+                            android:layout_toRightOf="@+id/iv_usinghelp"
+                            android:text="关于"
+                            android:textColor="@color/blackText1"
+                            android:textSize="@dimen/textSize16" />
+
+                        <ImageView
+                            android:id="@+id/iv_usinghelp_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_triangle_babylist_item" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray6" />
+
+                    <!--设置-->
+                    <RelativeLayout
+                        android:id="@+id/re_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingRight="@dimen/dp15">
+
+                        <ImageView
+                            android:id="@+id/iv_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/setting" />
+
+                        <TextView
+                            android:id="@+id/tv_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_toEndOf="@+id/iv_setting"
+                            android:layout_toRightOf="@+id/iv_setting"
+                            android:text="设置"
+                            android:textColor="@color/blackText1"
+                            android:textSize="@dimen/textSize16" />
+
+                        <ImageView
+                            android:id="@+id/iv_setting_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_triangle_babylist_item" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--退出登录-->
+                <RelativeLayout
+                    android:id="@+id/re_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/re_usinghelp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="#fff"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/tv_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="退出"
+                        android:textColor="@color/blackText1"
+                        android:textSize="@dimen/textSize18" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.ns.yc.ycutilslib.scrollView.BounceScrollView>
+
+</RelativeLayout>
